@@ -17,7 +17,7 @@ describe("Hotel", function () {
   it("can get the price for a rewards customer on weekday", function () {
     expect(mockHotel.getPriceFor("rewards","weekday")).toEqual(90);
   });
-  it("can reduce the price of a price array to a single price based on customer type", function(){
-    expect(mockHotel.priceReducer("regular", ["weekday","weekend","weekday"])).toEqual(310);
+  it("can reduce the price of a price array to a single price based on customer type and dates", function(){
+    expect(mockHotel.getTotalPriceForDates("regular", ["weekday","weekend","weekday"])).toEqual(310);
   });
 });
